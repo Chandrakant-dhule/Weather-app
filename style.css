@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('pexels-mali.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100dvh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+}
+
+.card {
+    width: 100%; /* Increased width */
+    max-width: 800px; /* Further increased max width */
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.15), rgb(255, 255, 255, 0.15));
+    border-radius: 25px;
+    padding: 60px 50px; /* Increased padding */
+    text-align: center;
+    z-index: 1;
+    color: #ebfffc;
+    height: auto;
+    min-height: 600px; /* To ensure the card doesn't shrink too much */
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 15px 30px;
+    height: 90px; /* Increased height */
+    border-radius: 35px;
+    flex: 1;
+    margin-right: 10px;
+    font-size: 40px; /* Larger font size */
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    width: 90px; /* Increased button size */
+    height: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 30px; /* Larger search icon */
+}
+
+.weather-icon {
+    margin-top: 40px;
+    width: 250px; /* Larger weather icon */
+    height: 250px; /* Set explicit height */
+}
+
+.weather h1 {
+    font-size: 110px; /* Larger font size */
+    font-weight: 600;
+}
+
+.weather h2 {
+    font-size: 60px; /* Larger font size */
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 70px; /* Increased spacing */
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 10px;
+    height: 300px;
+}
+
+.col img {
+    width: 160px; /* Larger icons */
+    height: 190px; /* Set explicit height */
+    margin-right: 15px;
+}
+
+.humidity, .wind {
+    font-size: 40px; /* Increased font size */
+    margin-top: -6px;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 40px 30px;
+        max-width: 90%;
+    }
+    .weather h1 {
+        font-size: 70px;
+    }
+    .weather h2 {
+        font-size: 40px;
+    }
+    .search input {
+        font-size: 30px;
+        padding: 10px 20px;
+        height: 60px;
+    }
+    .search button {
+        width: 60px;
+        height: 60px;
+    }
+    .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
